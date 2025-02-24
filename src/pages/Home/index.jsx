@@ -1,34 +1,13 @@
-import { Link } from "react-router";
-import NarutoLogoImg from "../../assets/naruto.logo.png";
 import NarutoBgImg from "../../assets/naruto.jpg";
 import NarutoUzumakiImg from "../../assets/naruto.uzumaki.jpg";
 import VillageSymbolKonohaImg from "../../assets/simbolo.aldeia.folha.png";
+import Header from "../../components/Header";
+import Container from "../../components/Container";
 
 function Home() {
   return (
-    <div className="relative h-screen">
-      <div
-        className={`
-          p-4 
-          fixed 
-          w-full 
-          text-white 
-          grid 
-          grid-cols-3 
-          gap-4 
-          z-10 
-          bg-radial-[at_50%_85%] from-sky-400 via-blue-600 to-indigo-900 to-90%
-        `}
-      >
-        <div>
-          <img className="w-28" src={NarutoLogoImg} alt="naruto logo" />
-        </div>
-        <div className="text-xl font-bold uppercase text-center grid grid-cols-3 gap-4 place-items-center">
-          <Link to="/">Home</Link>
-          <Link to="/characters">Characters</Link>
-          <Link to="#">Villages</Link>
-        </div>
-      </div>
+    <Container>
+      <Header />
 
       <div
         className="relative h-full bg-cover bg-center"
@@ -77,7 +56,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
