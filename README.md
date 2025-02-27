@@ -12,9 +12,26 @@ The project's goal is to provide a simple and interactive experience for fans of
 - ReactJs
 - React Router
 - Tailwind CSS
+- Axios
 
 ## How to run the project
 - in development
 
 ## Features
-- in development
+
+### Navigation & Structure
+- **Home Page:** :white_check_mark: Main screen with navigation options.
+- **Navigation Menu:** :white_check_mark: Fixed header with links to the main sections.
+- **Explore Button:** :white_check_mark: On the home page, directs users to a menu to choose what to search for.
+- **Quick Links:** :white_check_mark: Direct access to character and village pages.
+- **Responsive Design:** :x: Adaptable interface for different devices.
+
+### Characters
+- **Character Listing Page:** :white_check_mark: Displays a list of characters from the Naruto Classic universe.
+- **Pagination:** :x: Displays up to six characters per page.
+- **Character Details Page:** :x: Shows complete information about a specific character.
+
+### Villages
+- **Village Listing Page:** :x: Displays a list of villages from the Naruto Classic universe.
+- **Pagination:** :x: Displays a limited number of villages per page.
+- **Village Details Page:** :x: Shows complete information about a specific village.
