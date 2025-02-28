@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Footer from "../../components/Footer";
 
 function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -15,8 +16,11 @@ function Characters() {
 
   const getCharacters = async () => {
     try {
-      const { data } = await api.get("/characters");
-      setCharacters(data);
+      const { data } = await api.get("/characters?page=1");
+
+      console.log(data);
+
+      setCharacters(data.data);
     } catch (error) {
       if (!axios.isAxiosError(error)) return;
       console.log(error);
@@ -26,11 +30,13 @@ function Characters() {
   return (
     <Container>
       <Header />
+
       <div
         className="
           pt-25 
           min-h-screen
           bg-radial-[at_50%_75%] from-orange-500 via-orange-400 to-orange-400 to-90%
+          pb-4
         "
       >
         <h1
@@ -76,6 +82,8 @@ function Characters() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </Container>
   );
 }
