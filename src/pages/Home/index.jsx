@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Container from "../../components/Container";
 import { Link } from "react-router";
 import { useRef } from "react";
+import Footer from "../../components/Footer";
 
 function Home() {
   const exploreRef = useRef(null);
@@ -73,6 +74,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </Container>
   );
 }

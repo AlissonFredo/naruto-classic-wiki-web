@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Footer from "../../components/Footer";
 
 function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -26,11 +27,13 @@ function Characters() {
   return (
     <Container>
       <Header />
+
       <div
         className="
           pt-25 
           min-h-screen
           bg-radial-[at_50%_75%] from-orange-500 via-orange-400 to-orange-400 to-90%
+          pb-4
         "
       >
         <h1
@@ -76,6 +79,8 @@ function Characters() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </Container>
   );
 }
