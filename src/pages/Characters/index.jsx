@@ -16,8 +16,11 @@ function Characters() {
 
   const getCharacters = async () => {
     try {
-      const { data } = await api.get("/characters");
-      setCharacters(data);
+      const { data } = await api.get("/characters?page=1");
+
+      console.log(data);
+
+      setCharacters(data.data);
     } catch (error) {
       if (!axios.isAxiosError(error)) return;
       console.log(error);
