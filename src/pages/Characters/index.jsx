@@ -86,7 +86,7 @@ function Characters() {
                   key={key}
                   className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
                 >
-                  <Link to="/">
+                  <Link to={`/characters/${character.id}`}>
                     <div
                       className="size-50 rounded-full bg-cover bg-center"
                       style={{ backgroundImage: `url(${character.url})` }}
