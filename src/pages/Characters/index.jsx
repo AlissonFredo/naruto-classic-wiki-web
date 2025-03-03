@@ -18,7 +18,7 @@ function Characters() {
 
   useEffect(() => {
     getCharacters();
-  }, []);
+  }, [pagination.currentPage]);
 
   const getCharacters = async () => {
     try {
