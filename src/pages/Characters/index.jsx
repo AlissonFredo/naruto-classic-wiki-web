@@ -17,6 +17,7 @@ function Characters() {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getCharacters();
   }, [pagination.currentPage]);
 

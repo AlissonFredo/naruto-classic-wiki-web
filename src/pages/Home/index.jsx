@@ -4,7 +4,7 @@ import VillageSymbolKonohaImg from "../../assets/simbolo.aldeia.folha.png";
 import Header from "../../components/Header";
 import Container from "../../components/Container";
 import { Link } from "react-router";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Footer from "../../components/Footer";
 
 function Home() {
@@ -15,6 +15,10 @@ function Home() {
       exploreRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>

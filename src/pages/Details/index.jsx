@@ -12,6 +12,7 @@ const Details = () => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getCharacter();
   }, []);
 
