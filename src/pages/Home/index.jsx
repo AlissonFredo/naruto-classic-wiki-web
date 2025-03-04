@@ -63,7 +63,7 @@ function Home() {
             </Link>
           </div>
           <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to="/">
+            <Link to="/villages">
               <div
                 className="size-60 bg-white rounded-full bg-cover bg-center bg-no-repeat"
                 style={{

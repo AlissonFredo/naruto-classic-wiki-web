@@ -5,7 +5,7 @@ function Header() {
   const navLinks = [
     { title: "Home", url: "/" },
     { title: "Characters", url: "/characters" },
-    { title: "Villages", url: "#" },
+    { title: "Villages", url: "/villages" },
   ];
 
   return (
