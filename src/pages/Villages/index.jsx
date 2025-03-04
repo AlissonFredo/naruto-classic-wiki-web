@@ -1,14 +1,13 @@
-import Container from "../../components/Container";
-import Header from "../../components/Header";
-import { api } from "../../services/api";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import Container from "../../components/Container";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import Pagination from "../../components/Pagination";
+import { api } from "../../services/api";
 import List from "../../components/List";
 
-function Characters() {
-  const [characters, setCharacters] = useState([]);
+const Villages = () => {
+  const [villages, setVillages] = useState([]);
 
   const [pagination, setPagination] = useState({
     currentPage: 1,
@@ -18,16 +17,16 @@ function Characters() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    getCharacters();
+    getVillages();
   }, [pagination.currentPage]);
 
-  const getCharacters = async () => {
+  const getVillages = async () => {
     try {
       const { data } = await api.get(
-        `/characters?page=${pagination.currentPage}`
+        `/villages?page=${pagination.currentPage}`
       );
 
-      setCharacters(data.data);
+      setVillages(data.data);
 
       setPagination({
         currentPage: parseInt(data.currentPage),
@@ -69,10 +68,10 @@ function Characters() {
             uppercase
           "
         >
-          Characters
+          Villages
         </h1>
 
-        <List items={characters} baseUrl="/characters" />
+        <List items={villages} baseUrl="/villages" />
 
         <Pagination
           currentPage={pagination.currentPage}
@@ -84,6 +83,6 @@ function Characters() {
       <Footer />
     </Container>
   );
-}
+};
 
-export default Characters;
+export default Villages;

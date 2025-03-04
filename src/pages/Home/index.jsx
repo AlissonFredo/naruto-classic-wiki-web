@@ -4,7 +4,7 @@ import VillageSymbolKonohaImg from "../../assets/simbolo.aldeia.folha.png";
 import Header from "../../components/Header";
 import Container from "../../components/Container";
 import { Link } from "react-router";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Footer from "../../components/Footer";
 
 function Home() {
@@ -15,6 +15,10 @@ function Home() {
       exploreRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>
@@ -59,7 +63,7 @@ function Home() {
             </Link>
           </div>
           <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to="/">
+            <Link to="/villages">
               <div
                 className="size-60 bg-white rounded-full bg-cover bg-center bg-no-repeat"
                 style={{
