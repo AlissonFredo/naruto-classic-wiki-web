@@ -5,22 +5,25 @@ import { useNavigate, useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 
-const Details = () => {
+const Details = ({ type = "characters" }) => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const [character, setCharacter] = useState({});
+  const [detail, setDetail] = useState({});
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    getCharacter();
+    getDetails();
   }, []);
 
-  const getCharacter = async () => {
+  const getDetails = async () => {
     try {
-      const { data } = await api.get(`/characters/${id}`);
+      const url =
+        type == "characters" ? `/characters/${id}` : `/villages/${id}`;
 
-      setCharacter(data);
+      const { data } = await api.get(url);
+
+      setDetail(data);
     } catch (error) {
       if (!axios.isAxiosError(error)) return;
       console.log(error);
@@ -45,16 +48,16 @@ const Details = () => {
             <div className="flex justify-center">
               <div
                 className="size-60 rounded-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${character.url})` }}
+                style={{ backgroundImage: `url(${detail.url})` }}
               ></div>
             </div>
             <div className="flex flex-col justify-center">
               <h1 className="text-start text-white font-bold uppercase text-4xl">
-                {character.name}
+                {detail.name}
               </h1>
             </div>
             <div className="col-span-2 px-20 py-10 mt-8 text-white font-bold uppercase bg-stone-800/10">
-              {character.about}
+              {detail.about}
             </div>
           </div>
           <div className="text-end py-5">

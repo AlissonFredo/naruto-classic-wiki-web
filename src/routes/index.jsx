@@ -12,6 +12,7 @@ function Routers() {
         <Route path="/characters" element={<Characters />} />
         <Route path="/characters/:id" element={<Details />} />
         <Route path="/villages" element={<Villages />} />
+        <Route path="/villages/:id" element={<Details type="villages" />} />
       </Routes>
     </BrowserRouter>
   );

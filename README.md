@@ -33,5 +33,5 @@ The project's goal is to provide a simple and interactive experience for fans of
 
 ### Villages
 - **Village Listing Page:** :white_check_mark: Displays a list of villages from the Naruto Classic universe.
-- **Pagination:** :x: Displays a limited number of villages per page.
-- **Village Details Page:** :x: Shows complete information about a specific village.
+- **Pagination:** :white_check_mark: Displays a limited number of villages per page.
+- **Village Details Page:** :white_check_mark: Shows complete information about a specific village.
