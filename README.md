@@ -32,6 +32,6 @@ The project's goal is to provide a simple and interactive experience for fans of
 - **Character Details Page:** :white_check_mark: Shows complete information about a specific character.
 
 ### Villages
-- **Village Listing Page:** :x: Displays a list of villages from the Naruto Classic universe.
+- **Village Listing Page:** :white_check_mark: Displays a list of villages from the Naruto Classic universe.
 - **Pagination:** :x: Displays a limited number of villages per page.
 - **Village Details Page:** :x: Shows complete information about a specific village.
