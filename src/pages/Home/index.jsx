@@ -29,12 +29,29 @@ function Home() {
         style={{ backgroundImage: `url(${NarutoBgImg})` }}
       >
         <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-2xl sm:text-4xl font-bold">
             Discover the story of Classic Naruto
           </h1>
           <button
             onClick={scrollToExplore}
-            className="mt-6 bg-orange-500 hover:bg-orange-600 text-white text-3xl px-6 py-2 rounded-lg font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100"
+            className="
+              mt-6 
+              bg-orange-500 
+              hover:bg-orange-600 
+              text-white
+              text-xl 
+              sm:text-3xl 
+              px-6 
+              py-2 
+              rounded-lg 
+              font-semibold 
+              transition 
+              delay-150 
+              duration-300 
+              ease-in-out 
+              hover:-translate-y-1 
+              hover:scale-100
+            "
           >
             Explore
           </button>
@@ -42,36 +59,52 @@ function Home() {
       </div>
 
       <div
-        className="h-full text-white flex flex-col items-center justify-center bg-radial-[at_50%_75%] from-orange-500 via-orange-400 to-orange-400 to-90%"
+        className="
+          h-full 
+          min-h-screen
+          text-white 
+          flex 
+          flex-col 
+          items-center 
+          justify-center 
+          bg-radial-[at_50%_75%] 
+          from-orange-500 
+          via-orange-400 
+          to-orange-400 
+          to-90%
+          p-3
+          sm:p-none
+        "
         id="explore"
         ref={exploreRef}
       >
-        <h2 className="text-4xl font-bold mb-10">
+        <h2 className="text-2xl sm:text-4xl font-bold mb-5 sm:mb-10">
           Choose what you want to dive in:
         </h2>
 
-        <div className="grid grid-cols-2 gap-x-15">
-          <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-15">
+          <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 mb-5 sm:mb-none">
             <Link to="/characters">
               <div
-                className="size-60 rounded-full bg-cover bg-center"
+                className="size-45 sm:size-60 rounded-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${NarutoUzumakiImg})` }}
               ></div>
-              <h2 className="mt-8 rounded text-center text-white font-bold uppercase text-3xl">
+              <h2 className="mt-4 sm:mt-8 rounded text-center text-white font-bold uppercase text-xl sm:text-3xl">
                 Characters
               </h2>
             </Link>
           </div>
+
           <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
             <Link to="/villages">
               <div
-                className="size-60 bg-white rounded-full bg-cover bg-center bg-no-repeat"
+                className="size-45 sm:size-60 bg-white rounded-full bg-cover bg-center bg-no-repeat"
                 style={{
                   backgroundImage: `url(${VillageSymbolKonohaImg})`,
                   backgroundSize: "170px",
                 }}
               ></div>
-              <h2 className="mt-8 rounded text-center text-white font-bold uppercase text-3xl">
+              <h2 className="mt-4 sm:mt-8 rounded text-center text-white font-bold uppercase text-xl sm:text-3xl">
                 Villages
               </h2>
             </Link>
