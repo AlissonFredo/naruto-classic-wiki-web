@@ -24,7 +24,7 @@ The project's goal is to provide a simple and interactive experience for fans of
 - **Navigation Menu:** :white_check_mark: Fixed header with links to the main sections.
 - **Explore Button:** :white_check_mark: On the home page, directs users to a menu to choose what to search for.
 - **Quick Links:** :white_check_mark: Direct access to character and village pages.
-- **Responsive Design:** :x: Adaptable interface for different devices.
+- **Responsive Design:** :white_check_mark: Adaptable interface for different devices.
 
 ### Characters
 - **Character Listing Page:** :white_check_mark: Displays a list of characters from the Naruto Classic universe.
