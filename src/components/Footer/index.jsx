@@ -4,15 +4,21 @@ const Footer = () => {
   return (
     <footer
       className="
+      text-sm
       text-white 
-      p-3 
+      p-2
+      sm:p-3 
       font-bold 
       uppercase 
       bg-radial-[at_50%_85%] 
       from-sky-400 
       via-blue-600 
-      to-indigo-900 to-90%
-      flex justify-center place-items-center
+      to-indigo-900 
+      to-90%
+      flex 
+      justify-center 
+      place-items-center
+
     "
     >
       Developed by Douglas Alisson
