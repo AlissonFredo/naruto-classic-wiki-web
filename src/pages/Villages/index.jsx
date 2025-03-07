@@ -66,6 +66,7 @@ const Villages = () => {
             text-4xl 
             font-bold 
             uppercase
+            mb-10
           "
         >
           Villages

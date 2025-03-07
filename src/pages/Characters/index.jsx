@@ -67,6 +67,7 @@ function Characters() {
             text-4xl 
             font-bold 
             uppercase
+            mb-10
           "
         >
           Characters
