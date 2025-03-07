@@ -35,28 +35,30 @@ const Details = ({ type = "characters" }) => {
       <Header />
       <div
         className="
-          pt-25 
           min-h-screen
           bg-radial-[at_50%_75%] from-orange-500 via-orange-400 to-orange-400 to-90%
           pb-6
           pt-30
           flex justify-center items-center
+          px-3
         "
       >
-        <div className="w-2/3">
-          <div className="grid grid-cols-2 gap-4 mt-10">
+        <div className="w-3/3 sm:w-2/3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
             <div className="flex justify-center">
               <div
-                className="size-60 rounded-full bg-cover bg-center"
+                className="size-50 md:size-60 rounded-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${detail.url})` }}
               ></div>
             </div>
+
             <div className="flex flex-col justify-center">
-              <h1 className="text-start text-white font-bold uppercase text-4xl">
+              <h1 className="text-center sm:text-start text-white font-bold uppercase text-xl md:text-4xl">
                 {detail.name}
               </h1>
             </div>
-            <div className="col-span-2 px-20 py-10 mt-8 text-white font-bold uppercase bg-stone-800/10">
+
+            <div className="sm:col-span-2 px-5 sm:px-20 py-5 sm:py-10 mt-8 text-white font-bold uppercase bg-stone-800/10">
               {detail.about}
             </div>
           </div>
